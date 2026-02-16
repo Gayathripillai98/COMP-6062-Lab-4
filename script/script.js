@@ -1,23 +1,26 @@
-const selectElement = document.getElementById("options");
-const checkboxContainer = document.getElementById("checkboxContainer");
-selectElement.addEventListener("change", function () {
+const select = document.getElementById("options");
+const checkboxDiv = document.getElementById("checkboxContainer");
+const textInput = document.getElementById("textInput");
+const form = document.getElementById("myForm");
 
-    if (selectElement.value === "show") {
-        checkboxContainer.classList.remove("hidden");
+// Show / Hide checkbox
+select.addEventListener("change", function () {
+    if (select.value === "show") {
+        checkboxDiv.style.display = "block";
     } else {
-        checkboxContainer.classList.add("hidden");
+        checkboxDiv.style.display = "none";
     }
-
 });
 
-
-
-const textInput = document.getElementById("textInput");
-
+// Enter key alert
 textInput.addEventListener("keydown", function (event) {
-
     if (event.key === "Enter") {
+        event.preventDefault();
         alert("You pressed the Enter key!");
     }
+});
 
+// Prevent form refresh
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 });

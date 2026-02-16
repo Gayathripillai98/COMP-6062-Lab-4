@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <title>Week 5</title>
-       <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <h1>Event Handler Lab</h1>
-        <form id="myForm">
-            <label for="options">Choose an option:</label>
-            <select id="options">
-                <option value="">-- Select One --</option>
-                <option value="show">Show Checkbox</option>
-                <option value="hide">Hide Checkbox</option>
-                <option value="other">Other Option</option>
-            </select>
-    
-            <br><br>
-    
-            
-            <div id="checkboxContainer" class="hidden">
-                <input type="checkbox" id="extraCheck">
-                <label for="extraCheck">Extra Option</label>
-            </div>
-    
-            <br>
-            <label for="textInput">Type something and press Enter:</label>
-            <input type="text" id="textInput">
-    
-        </form>
-    
-        <script src="scipt/script.js"></script>
-    </body>
+<head>
+    <title>Event Handler Lab</title>
+</head>
+<body>
+
+<h1>Event Handler Lab</h1>
+
+<form id="myForm">
+
+    <label>Choose an option:</label>
+    <select id="options">
+        <option value="">-- Select One --</option>
+        <option value="show">Show Checkbox</option>
+        <option value="hide">Hide Checkbox</option>
+    </select>
+
+    <br><br>
+
+    <div id="checkboxContainer" style="display:none;">
+        <input type="checkbox" id="agree">
+        <label for="agree">I agree to the terms</label>
+    </div>
+
+    <br>
+
+    <label>Type something and press Enter:</label>
+    <input type="text" id="textInput" placeholder="Press Enter inside this box.">
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
 </html>
